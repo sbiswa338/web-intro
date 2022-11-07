@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">    
     <title>Attributes</title>
 </head>
 <body>
+
+    <!--Horizontal Navigation-->
+    <div>
+        <ul class="nav-h">
+            <li href="index.html">Home</li>
+            <li href="page1.html">Page 1</li>
+            <li href="#" class="active">Page 2</li>
+        </ul>
+    </div>
+
+
     <!-- The below elements will have attributes added -->
     <div class ="section-c">
         <p style = "color: purple; font-size: x-large;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia numquam, impedit ea expedita vero quae, nam autem possimus modi, voluptates sit. Maxime explicabo repellat autem commodi neque, facere, voluptate voluptatum quo, nostrum dicta quibusdam mollitia.</p>
 
         <h3>My Grocery List</h3>
-        <ul class="grocery_list">
+        <ul class="grocery_list" id = "grocery">
             <li>Milk</li>
             <li>Eggs</li>
             <li>Bread</li>
@@ -21,8 +33,25 @@
             <li>Cereal</li>
         </ul>
 
+        <button id="btn-change" onclick="changeList()" >Change List</button>
+
         <h2>Link to Sports</h2>
         <a href="http://www.espn.com/" target="_blank">ESPN</a> 
     </div>
+
+<div id="box"></div>
+
+    <script>
+        function changeList() {
+            document.getElementById('grocery')
+            .classList.toggle('grocery_square');
+        }
+
+        let boxInfo = document.getElementById('box');
+        console.log(boxInfo.offsetWidth);
+        console.log(boxInfo.offsetHeight);
+
+    </script>
+
 </body>
 </html>
