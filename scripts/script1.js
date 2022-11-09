@@ -1,4 +1,4 @@
-/* Element by id */
+/* Element by id */ 
 let able = document.getElementById("first").innerText;
 console.log(able);
 let msg;
@@ -26,3 +26,4 @@ heads.forEach(delta => {
 // Example by element 
 let para = document.querySelectorAll('p');
 console.log(para); 
+

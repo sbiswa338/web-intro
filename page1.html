@@ -27,22 +27,26 @@
     <!--Horizontal Navigation-->
     <div>
         <ul class="nav-h">
-            <li href="index.html">Home</li>
-            <li href="page1.html" class="active">Page 1</li>
-            <li href="page2.html">Page 2</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" class="active">Page 1</a></li>
+            <li><a href="page2.html" >Page 2</a></li>
+            <li><a href="page3.html">Page 3</a></li>
         </ul>
     </div>
+
+
+    <div class = "banner"></div>
 
     <!-- This will surround all of the div tags and content -->
     <div class="outside">
         <!-- Top div can have navigation or maybe a banner-->
-        <div class="top"><h1>Header Section</h1></div>
+        <div class="top" ><h1>Header Section</h1></div>
 
         <!-- Left div can have navigation or other information  -->
         <div class="sides"><p>Left div section</p></div>
 
         <!-- Center div is where most of your content will be -->
-        <div class="center"><p>Center div section</p></div>
+        <div class="center" id="center"><p>Center div section</p></div>
 
         <!-- Right div can have navigation or other information -->
         <div class="sides"><p>Right div section</p></div>
@@ -50,6 +54,26 @@
         <!-- Bottom div is where the footer information goes -->
         <div class="bottom"><h2>Footer div section</h2></div>
     </div>
+
+    <button id="sample">Something</button>
+    
+    <script>
+
+        document.getElementById('sample').addEventListener('click', something); 
+
+        function something(){
+            console.log('Trying an Event listener.')
+        }
+
+        window.onload = function() {
+            console.log('The page has loaded.')
+        }
+
+        document.getElementById('center').addEventListener('dblclick', function(){
+            console.log('Element double-clicked')
+        });
+
+    </script>
     
 </body>
 </html>
