@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Intro To Web Lab</title>
+</head>
+<body>
+
+
+        <!--Horizontal Navigation/ Task 1-->
+        <div>
+            <ul class="nav-h">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page1.html">Page 1</a></li>
+                <li><a href="page2.html">Page 2</a></li>
+                <li><a href="page3.html">Page 3</a></li>
+                <li><a href="#" class="active">Page 4</a></li>
+            </ul>
+        </div>
+
+            <!-- Task 2 -->
+        <div class="lab">
+            <h1>My favorite types of Pizza</h1>
+            <ul class="my-roman" id="pizza">
+                <li>Pepperoni Pizza</li>
+                <li>Supreme Pizza</li>
+                <li>Philly Cheese Steak Pizza</li>
+                <li>3 Meat Pizza</li>
+                <li>Breakfast Pizza</li>
+            </ul>
+            <button onclick="pizzaList()">Change Style</button>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="lab">
+            <form>
+                <label for="fname">The values below will be added together</label><br>
+                <input type="text" name="num1" id="num1"><br>
+                <input type="text" name="num2" id="num2"><br>
+                <p id="total"></p>
+                <button type="button" onclick="addThem()">Sum</button>                
+            </form>
+        </div>
+
+        <!-- Task 2/3 Continuted -->
+        <script>
+            function pizzaList() {
+             document.getElementById('pizza').classList.toggle('my-roman');
+            }
+
+            function addThem(){
+            let firstNum = document.getElementById('num1').value;
+            let secondNum = document.getElementById('num2').value;
+
+            let total = parseInt(firstNum) + parseInt(secondNum);
+            
+            let paragraph = document.getElementById('total').innerText= `Sum total = ${total}`;
+
+            
+            }
+        </script>
+</body>
+</html>
