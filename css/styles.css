@@ -89,6 +89,35 @@ label {
     margin: 36px;
 }
 
+.lab ul{
+    border: solid rgb(61, 108, 102);
+    max-width: 300px;
+    background-color: rgb(128, 255, 212, .5) ;
+}
+
+.lab button{
+    border: solid black;
+    font-size: bold;
+    border-radius: 20%;
+    height: 30px;
+    color: greenyellow;
+    background-color: #5448c8;
+    cursor: pointer;
+}
+
 .my-roman {
     list-style: lower-roman;
+}
+
+.lab form {
+    border: solid;
+    max-width: 400px;
+    background-color: rgba(128, 255, 212, .5)
+}
+.lab form input{
+    width: 40px;
+    height: 20px;
+    margin-top: 15px;
+    background-color: red;
+    color: azure;
 }
